@@ -1,0 +1,51 @@
+<div class="modal-content">
+    <section>
+        <span class="close-button">&times;</span>
+        <h2>SWEAT<span style="color: var(--main-light-color)">DRIFT</span> | Shopping Cart</h2>
+    </section>
+    
+    <table style="width:100%">
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+        </tr>
+
+        <tr>
+          <td ><span id="item-name"><input type="checkbox" id="checkout-item" name="checkout" ></span></td>
+          <td id="item_price"></td>
+          <td id="item_stocks"></td>
+          <td></td>
+          <td><span id="remove_item_fr_cart">remove</span></td>
+        </tr>
+
+    </table>
+
+    <section style="float: right; padding: 2rem;">
+        <span style="padding: 2rem; ">TOTAL <span>2300</span></span>
+        <button id="checkout-btn" onclick="checkOut('{{item.item_stocks}}')">check out</button>
+    </section>
+    
+</div>
+
+<style>
+   
+    th {
+        text-align: left;
+    }
+
+    #remove_item_fr_cart {
+        color: red;
+    }
+
+    #remove_item_fr_cart:hover {
+        text-decoration-line: underline;  
+    }
+</style>
+
+<script>
+    function checkOut(itemStocks, qty) {
+        let stocksDecrease = itemStocks - qty; // count from the quantity from the cart 
+    }
+</script>

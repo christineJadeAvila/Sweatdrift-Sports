@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --main-font: 'Bebas Neue';
+    --main-dark-color: #091821;
+    --main-light-color: #61F0D6;
+    --light-color: #E5E5E5;
+
+    font-family: var(--main-font);
+    margin: 2.5rem;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 20% 76%;
+    column-gap: 3rem;
+}
+
+#filter-box {
+    border: solid 1px var(--light-color);
+    padding: 0 1rem 5rem 1rem;
+
+    /* display: block;
+    width: 100%;
+    height: 38%; */
+
+    width: 250px;
+    height: 150px;
+}
+
+#item-card {
+    border: 0.5px var(--light-color) solid;
+    width: 18%;
+
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+#item-card:hover {
+    transition: 0.3s;
+    border: 1px var(--main-dark-color) solid;
+    border-radius: 10px;
+}
+
+#second-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; 
+           
+}
+
+.items { 
+    width: 190px;
+    height: 220px;
+}
+
+button {
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
+
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border: 1px var(--main-dark-color) solid;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    cursor: pointer;
+    float: right;
+}
+
+button:hover {
+    opacity: 90%;
+    transition: 0.7s;
+    border-radius: 1rem;
+}
+
+nav {
+    overflow: hidden;       
+   
+}
+nav h3 {
+    float: right;
+    margin: 1rem;
+}
+nav h2 {
+    float: left;
+}
+
+header {
+    padding: 1rem 1rem 1rem 0;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    padding: 1rem 1.5rem;
+    width: 60%;
+    height: 600px;
+    
+    border-radius: 2px;
+    
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#price {
+    float: right;
+    color: var(--main-light-color);
+}
+
+#search-field {
+    width: 99.1%;
+    
+    padding: 0.5rem;
+    border: 0.5px solid var(--light-color);
+
+}
