@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load static %}
 
 <div id="second-div">
@@ -46,3 +47,53 @@
     }
      
 </script>
+=======
+{% load static %}
+
+<div id="second-div">
+
+    {% for item in items %}
+
+    <div id="item-card">
+        <img class="items" src="{{item.item_img.url}}" alt="">
+        <h4>{{item.item_name}}<span id="price">${{item.item_price}}</span></h4>
+        <button 
+          class="buy-button"
+          data-item-name="{{item.item_name}}"
+          data-item-price="{{item.item_price}}"
+          data-item-stocks="{{item.item_stocks}}"
+        >BUY</button>
+        <!-- onclick="addToCart('{{item.item_name}}', '{{item.item_stocks}}', '{{item.item_price}}') -->
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<script>
+
+    function addToCart() {
+      console.log("bought!");
+
+      let cartValue = document.getElementById("cart-value")
+      let count = parseInt(cartValue.innerHTML)
+
+      count++; // increment the count
+      cartValue.innerHTML = count; // update the span element with the new count
+
+      
+      alert("added to cart!")
+
+      
+    }
+
+    const btn = document.querySelectorAll(".buy-button");
+
+    for(let element = 0; element < btn.length; element++) {
+      btn[element].addEventListener("click", function() {
+        addToCart();
+      })
+    }
+     
+</script>
+>>>>>>> daad950f9bf9918ace52347581126bf4060fc0af

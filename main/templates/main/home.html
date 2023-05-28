@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'index.html' %}
 {% load static %}
 
@@ -22,4 +23,30 @@
 
 </section>
 
+=======
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+<header>
+    <!-- search component -->
+    {% include "main/components/search_component.html" %}
+</header>
+
+<section id="grid-container">
+    
+    <!-- 1 grid with 2 column, 20% and 80% -->
+
+        <!-- filter grid -->
+        {% include "main/components/filter_component.html" %}
+
+        <!-- item grid -->
+        {% include "main/components/itemsContainer_component.html" %}
+
+        
+
+</section>
+
+>>>>>>> daad950f9bf9918ace52347581126bf4060fc0af
 {% endblock %}

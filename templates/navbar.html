@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav>
     <h2>SWEAT<span style="color: var(--main-light-color)">DRIFT</span></h2>
     
@@ -66,4 +67,74 @@
     window.addEventListener("click", windowOnClick);
 
 
+=======
+<nav>
+    <h2>SWEAT<span style="color: var(--main-light-color)">DRIFT</span></h2>
+    
+    {% comment %} {% if user.is_authenticated %}
+        <a><h3>{{request.user.username}}</h3></a>
+    {% else %}
+        <a href="{% url 'login' %}"><h3 id="auth" > | SIGN IN</h3></a>
+    {% endif %} {% endcomment %}
+
+    <button id="cart" class="trigger" >CART <span id="cart-value">0</span></button>
+
+    <!-- Modal Content -->
+    <section class="modal">
+        {% include "main/components/cart_component.html" %}
+    </section>
+</div>
+  
+</nav>
+
+<style>
+    #cart {
+        border: 0.5px solid black;
+        padding: 3px 1rem 3px 1rem;
+        color: var(--main-light-color);
+        background-color: black;
+        border-radius: 10px;
+        float: right;
+        margin: 1rem;
+        
+        font-size: 18px;
+    }
+
+    #cart-value {
+        color: red;
+        
+        padding: 1rem;
+       
+
+        
+    }
+
+    #auth {
+        padding: 3px 1rem 3px 1rem;
+    }
+
+</style>
+
+<script>
+
+    const modal = document.querySelector(".modal");
+    const trigger = document.querySelector(".trigger");
+    const closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+
+
+>>>>>>> daad950f9bf9918ace52347581126bf4060fc0af
 </script>   
